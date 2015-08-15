@@ -14,8 +14,14 @@ var ItemButton = function (properties, GI) {
     this.$button.css('font-size', '75%');
 };
 
+/** Itembutton extends Button
+*
+*/
 ItemButton.prototype = new Button;
 
+/** Add a Event to itembutton. Open popup with information on click.
+*
+*/
 ItemButton.prototype.addEvent = function () {
     $('#itemButton').on('click', function () {
         $('#popup').foundation('reveal', 'open');

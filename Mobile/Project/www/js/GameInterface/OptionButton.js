@@ -14,8 +14,14 @@ var OptionButton = function (properties, GI) {
     this.$button.css('font-size', '75%');
 };
 
+/** Optionbutton extends Button
+*
+*/
 OptionButton.prototype = new Button;
 
+/** Add a Event to optionbutton. Open popup with information on click.
+*
+*/
 OptionButton.prototype.addEvent = function () {
     $('#optionButton').on('click', function () {
         $('#popup').foundation('reveal', 'open');

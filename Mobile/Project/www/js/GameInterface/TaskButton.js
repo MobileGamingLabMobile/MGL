@@ -14,8 +14,14 @@ var TaskButton = function (properties, GI) {
     this.$button.css('font-size', '75%');
 };
 
+/**Taskbutton extends button
+*
+*/
 TaskButton.prototype = new Button;
 
+/**Display number of unread/new quests
+*
+*/
 TaskButton.prototype.addCount = function (num) {
     if (num != 0) {
         var _size = this.$button.height() * 2;
@@ -25,6 +31,9 @@ TaskButton.prototype.addCount = function (num) {
     }
 };
 
+/** Add a Event to taskbutton. Open popup with information on click.
+*
+*/
 TaskButton.prototype.addEvent = function () {
     var that = this;
     $('#taskButton').on('click', function (e) {
@@ -37,6 +46,9 @@ TaskButton.prototype.addEvent = function () {
     });
 };
 
+/** Get information of available,started and finished quests and display them in a popup
+*
+*/
 TaskButton.prototype.loadPopup = function () {
     this.GI.unreadQuests = 0;
     this.addCount(0);

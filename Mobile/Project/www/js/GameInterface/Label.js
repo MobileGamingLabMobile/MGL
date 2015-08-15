@@ -12,6 +12,9 @@ var Label = function (properties) {
     });
 }
 
+/** Append this label to a dom object (ele)
+*
+*/
 Label.prototype.appendTo = function (ele) {
     this.$label.appendTo(ele);
 };

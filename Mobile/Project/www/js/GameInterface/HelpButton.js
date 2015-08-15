@@ -11,8 +11,14 @@ var HelpButton = function (properties) {
     });
 };
 
+/**Helpbutton extends button
+*
+*/
 HelpButton.prototype = new Button;
 
+/** Add a Event to helpbutton. Open popup with information on click.
+*
+*/
 HelpButton.prototype.addEvent = function () {
     $('#helpButton').on('click', function () {
         $('#popup').foundation('reveal', 'open');

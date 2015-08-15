@@ -1,10 +1,16 @@
 var Popup = function () {
 };
 
+/** Close popup
+*
+*/
 Popup.prototype.close = function () {
     $('#popup').foundation('reveal', 'close');
 };
 
+/** Open popup
+*
+*/
 Popup.prototype.open = function () {
     $('#popup').foundation('reveal', 'open');
 
@@ -13,10 +19,16 @@ Popup.prototype.open = function () {
     });
 };
 
+/** Clears content shown in a popup
+*
+*/
 Popup.prototype.clear = function () {
     $('#popupcontent').html('');
 };
 
+/** show selection of available roles
+*
+*/
 Popup.prototype.selectRole = function (data) {
     var that = this;
     $('#popupcontent').append("Bitte w&auml;hle eine Rolle aus:<br><br>");
@@ -37,6 +49,9 @@ Popup.prototype.selectRole = function (data) {
     });
 };
 
+/** Show message from an questevent
+*
+*/
 Popup.prototype.questEvent = function (data) {
     $('#popupcontent').append(data.html);
 };

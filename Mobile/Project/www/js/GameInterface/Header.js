@@ -8,8 +8,14 @@ var Header = function (properties, GI) {
     this.setProperties(properties);
 };
 
+/** Header extends container
+*
+*/
 Header.prototype = new Container;
 
+/** Set properties of header
+*
+*/
 Header.prototype.setProperties = function (properties) {
     var that = this;
     for (var prop in properties) {

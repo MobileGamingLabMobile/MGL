@@ -45,6 +45,9 @@ Map.prototype.get = function () {
     };
 };
 
+/** Initialize Map
+*
+*/
 Map.prototype.initialize = function (container) {
     L.tileLayer('http://{s}.tiles.mapbox.com/v3/maxitwel.k5hb29n8/{z}/{x}/{y}.png', {
         attribution: '',
@@ -56,11 +59,17 @@ Map.prototype.initialize = function (container) {
     this.locate();
 };
 
+/** Zoom to a given place by coordinates (lat, lng)
+*
+*/
 Map.prototype.zoomTo = function (lat, lng) {
     this._map.setZoom(18);
     this._map.panTo(new L.LatLng(lat, lng));
 }
 
+/** Adds a marker to the map
+*
+*/
 Map.prototype.addMarker = function (lat, lng) {
     var marker = L.marker(L.latLng(lat, lng));
     marker.on('click', function (e) {
@@ -71,20 +80,17 @@ Map.prototype.addMarker = function (lat, lng) {
     this.markers.addLayer(marker);
 };
 
-Map.prototype.testPosition = function (x1, y1, x2, y2) {
-    var buffer = 0.00001;
-    if (x1 < x2 + buffer && x2 > x2 - buffer && y1 < y2 + buffer && y1 > y2 - buffer) {
-        return true;
-    } else {
-        return false;
-    }
-};
-
+/** Adds a Mapitem to the map
+*
+*/
 Map.prototype.addMapItem = function (data) {
     this.mapItems[data.id] = this.getMapItem(data.position);
     this.mapItems[data.id].addTo(this._map);
 };
 
+/** Removes a Mapitem from the map
+*
+*/
 Map.prototype.removeMapItem = function (data) {
     try {
         this._map.remove(this.mapItems[data.id]);
@@ -93,6 +99,9 @@ Map.prototype.removeMapItem = function (data) {
     }
 }
 
+/** Adds a panel which zooms to the users position on click
+*
+*/
 Map.prototype.addLocator = function () {
     var that = this;
     var locateButton = L.control({position: 'topright'});
@@ -109,6 +118,9 @@ Map.prototype.addLocator = function () {
     });
 };
 
+/** updates position of a player
+*
+*/
 Map.prototype.updatePlayerPos = function (x, y) {
     //Switch because database and leaflet need them the other way round
     this.playerPos.x = y;
@@ -116,6 +128,9 @@ Map.prototype.updatePlayerPos = function (x, y) {
     this.drawPlayer();
 };
 
+/** Draws a player
+*
+*/
 Map.prototype.drawPlayer = function () {
     var greenIcon = L.icon({
         iconUrl: 'img/officer-icon.png',
@@ -129,6 +144,9 @@ Map.prototype.drawPlayer = function () {
     }
 };
 
+/** Creates a geojson from a coordinate
+*
+*/
 Map.prototype.getMapItem = function (pos) {
     var that = this;
     var item = {
