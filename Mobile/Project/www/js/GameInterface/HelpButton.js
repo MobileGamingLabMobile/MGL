@@ -1,3 +1,8 @@
+/**
+ * contains and displays the help
+ * @param {type} properties
+ * @returns {HelpButton}
+ */
 var HelpButton = function (properties) {
     var _class = 'button radius tiny ';
     if (properties.align) {
@@ -11,14 +16,8 @@ var HelpButton = function (properties) {
     });
 };
 
-/**Helpbutton extends button
-*
-*/
 HelpButton.prototype = new Button;
 
-/** Add a Event to helpbutton. Open popup with information on click.
-*
-*/
 HelpButton.prototype.addEvent = function () {
     $('#helpButton').on('click', function () {
         $('#popup').foundation('reveal', 'open');

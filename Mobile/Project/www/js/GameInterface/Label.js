@@ -1,3 +1,8 @@
+/**
+ * initializes label
+ * @param {type} properties
+ * @returns {Label}
+ */
 var Label = function (properties) {
     var _class = null;
     if (properties.align) {
@@ -12,9 +17,6 @@ var Label = function (properties) {
     });
 }
 
-/** Append this label to a dom object (ele)
-*
-*/
 Label.prototype.appendTo = function (ele) {
     this.$label.appendTo(ele);
 };

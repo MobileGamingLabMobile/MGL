@@ -1,3 +1,9 @@
+/**
+ * will contain and display the available options in a game
+ * @param {type} properties
+ * @param {type} GI
+ * @returns {OptionButton}
+ */
 var OptionButton = function (properties, GI) {
     var _class = 'button radius';
     if (properties.align) {
@@ -14,14 +20,8 @@ var OptionButton = function (properties, GI) {
     this.$button.css('font-size', '75%');
 };
 
-/** Optionbutton extends Button
-*
-*/
 OptionButton.prototype = new Button;
 
-/** Add a Event to optionbutton. Open popup with information on click.
-*
-*/
 OptionButton.prototype.addEvent = function () {
     $('#optionButton').on('click', function () {
         $('#popup').foundation('reveal', 'open');

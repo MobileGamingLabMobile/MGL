@@ -1,3 +1,9 @@
+/**
+ * will contain and display the available items in a game
+ * @param {type} properties
+ * @param {type} GI
+ * @returns {ItemButton}
+ */
 var ItemButton = function (properties, GI) {
     var _class = 'button radius';
     if (properties.align) {
@@ -14,14 +20,8 @@ var ItemButton = function (properties, GI) {
     this.$button.css('font-size', '75%');
 };
 
-/** Itembutton extends Button
-*
-*/
 ItemButton.prototype = new Button;
 
-/** Add a Event to itembutton. Open popup with information on click.
-*
-*/
 ItemButton.prototype.addEvent = function () {
     $('#itemButton').on('click', function () {
         $('#popup').foundation('reveal', 'open');
@@ -33,7 +33,6 @@ ItemButton.prototype.addEvent = function () {
         });
     });
 };
-
 
 
 

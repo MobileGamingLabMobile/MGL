@@ -1,3 +1,9 @@
+/**
+ * initialization of the task button
+ * @param {type} properties
+ * @param {type} GI
+ * @returns {TaskButton}
+ */
 var TaskButton = function (properties, GI) {
     var _class = 'button radius';
     if (properties.align) {
@@ -14,14 +20,12 @@ var TaskButton = function (properties, GI) {
     this.$button.css('font-size', '75%');
 };
 
-/**Taskbutton extends button
-*
-*/
 TaskButton.prototype = new Button;
 
-/**Display number of unread/new quests
-*
-*/
+/**
+ * Displays if and how many new task are available
+ * @param {type} num : number of new tasks
+ */
 TaskButton.prototype.addCount = function (num) {
     if (num != 0) {
         var _size = this.$button.height() * 2;
@@ -30,10 +34,9 @@ TaskButton.prototype.addCount = function (num) {
         this.$button.html('Aufgaben');
     }
 };
-
-/** Add a Event to taskbutton. Open popup with information on click.
-*
-*/
+/**
+ * tasks are displayed in a popup when clicked on the task button
+ */
 TaskButton.prototype.addEvent = function () {
     var that = this;
     $('#taskButton').on('click', function (e) {
@@ -46,9 +49,9 @@ TaskButton.prototype.addEvent = function () {
     });
 };
 
-/** Get information of available,started and finished quests and display them in a popup
-*
-*/
+/**
+ * loads and displays all tasks
+ */
 TaskButton.prototype.loadPopup = function () {
     this.GI.unreadQuests = 0;
     this.addCount(0);
@@ -56,6 +59,10 @@ TaskButton.prototype.loadPopup = function () {
     var that = this;
     var i = 0;
 
+/**
+ * every second row contains another color for visualizaion improvement
+ * started task is colored in yellow
+ */
     for (quest in this.GI.quests) {
         console.log(that.GI.quests[quest]);
         if (that.GI.quests[quest].finished) {
@@ -86,6 +93,9 @@ TaskButton.prototype.loadPopup = function () {
             }
         }
 
+/**
+ * further description is added if a task is clicked
+ */
         $("#" + quest).on('click', function (e) {
             var id = this.id;
             if (!that.GI.quests[id].clicked) {

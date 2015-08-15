@@ -1,3 +1,9 @@
+/**
+ * initializes the header 
+ * @param {type} properties
+ * @param {type} GI
+ * @returns {Header}
+ */
 var Header = function (properties, GI) {
     this.$container = $('<div/>', {
         class: 'small-12'
@@ -8,14 +14,12 @@ var Header = function (properties, GI) {
     this.setProperties(properties);
 };
 
-/** Header extends container
-*
-*/
 Header.prototype = new Container;
 
-/** Set properties of header
-*
-*/
+/**
+ * defines the conted of the header
+ * @param {type} properties: data for the elements
+ */
 Header.prototype.setProperties = function (properties) {
     var that = this;
     for (var prop in properties) {
@@ -24,7 +28,6 @@ Header.prototype.setProperties = function (properties) {
                 $headline = $('<h2>' + properties[prop] + '</h2>');
                 $headline.appendTo(this.$container);
                 $('#quitbutton').on('click', function () {
-                    //TODO: Disconnect socket
                     window.window.location.href = "#gameselection";
                     //that.GI.socket.disconnect();
                 });
