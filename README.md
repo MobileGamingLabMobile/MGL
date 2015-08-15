@@ -26,15 +26,15 @@
 #### 1.1 Server
 
 ######Software:
-+	Nodejs (https://nodejs.org/download/) with the package manager NPM
-+	MongoDB (https://www.mongodb.org/downloads)
++	[Nodejs] (https://nodejs.org/download/) with the package manager NPM
++	[MongoDB] (https://www.mongodb.org/downloads)
 
 The aforementioned software need to be installed at the server. Note that MongoDB requires a 64Bit Operating Systems to run.
 
 Depending on your operating system, please follow the install instructions provided at the linked web sites. In the following the commands used to set up a server on a Ubuntu Server are documented.
 
 To install the software type in the following commands:
-<pre> sudo apt-get install nodejs npm mongodb <code>
+<pre><code> sudo apt-get install nodejs npm mongodb </pre></code>
 
 The next step would be to download the project from GitHub and unzip the package to your desired destination.
 wget https://github.com/MobileGamingLabMobile/MobileGamingLabBackend/archive/master.zip
