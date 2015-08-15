@@ -30,8 +30,8 @@
 
 
 
-1 Installation manual
-1.1 Server
+### 1. Installation manual
+#### 1.1. Server
 Software:
 •	Nodejs (https://nodejs.org/download/) with the package manager NPM
 •	MongoDB (https://www.mongodb.org/downloads)
