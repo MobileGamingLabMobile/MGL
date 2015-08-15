@@ -26,28 +26,29 @@
 #### 1.1 Server
 
 ######Software:
-+	[Nodejs] (https://nodejs.org/download/) with the package manager NPM
-+	[MongoDB] (https://www.mongodb.org/downloads)
++	[Nodejs](https://nodejs.org/download/) with the package manager NPM
++	[MongoDB](https://www.mongodb.org/downloads)
 
 The aforementioned software need to be installed at the server. Note that MongoDB requires a 64Bit Operating Systems to run.
 
 Depending on your operating system, please follow the install instructions provided at the linked web sites. In the following the commands used to set up a server on a Ubuntu Server are documented.
 
 To install the software type in the following commands:
-<pre><code> sudo apt-get install nodejs npm mongodb </pre></code>
+    sudo apt-get install nodejs npm mongodb
 
 The next step would be to download the project from GitHub and unzip the package to your desired destination.
-wget https://github.com/MobileGamingLabMobile/MobileGamingLabBackend/archive/master.zip
 
 After the package was unzipped, you need to change to the directory at which the project is located and install the required NodeJS libraries. This can simply be done by running the command in the folder where the app.js is located:
-npm install
-Database Configuration
-Now the project is installed and it is required to configure MongoDB. Therefore you need to create a database and an admin for this database. To achieve this we recommend to follow the instructions found at the following website.
 
-http://www.hacksparrow.com/mongodb-add-users-and-authenticate.html
+    npm install
 
-In order to establish the database connection from the project, we need to edit the projects database configuration file. The file can be found under “./config/database.js” from the root directory of the project. This file contains basically a JSON file with one parameter, namely “url”. As value we need to state the MongoDB connection string. As a schema the string looks like the following:
-“mongodb://<user>:<password>@<host>:<port>/<database>”, e.g. “mongodb://peter:peters_password@localhost:27017/mugl”
+######Database Configuration
+
+Now the project is installed and it is required to configure MongoDB. Therefore you need to create a database and an admin for this database. To achieve this we recommend to follow the instructions found at the following [website](http://www.hacksparrow.com/mongodb-add-users-and-authenticate.html).
+
+In order to establish the database connection from the project, we need to edit the projects database configuration file. The file can be found under 
+`“./config/database.js”` from the root directory of the project. This file contains basically a JSON file with one parameter, namely `“url”`. As value we need to state the MongoDB connection string. As a schema the string looks like the following:
+`“mongodb://<user>:<password>@<host>:<port>/<database>”, e.g. “mongodb://peter:peters_password@localhost:27017/mugl”`
 
 Start Up
 Way #1:
