@@ -1,23 +1,25 @@
 # MobileGamingLab
 
-Technical Documentation
-Inhaltsverzeichnis
-1 Installation manual	2
-1.1 Server	2
-1.2 Mobile terminal	3
-2 General description	5
-3 Technical description of functionalities and structures	6
-3.1 Database	6
-3.2 Community-Surface	12
-3.3 Interfaces (RestAPI / Websockets)	12
-3.4 Game structure	13
-4 Handling	17
-4.1 Set up a new game	17
-4.2 Playing the game on the mobile terminal	19
-5 Possible extending functionalities	22
-5.1 Editor	22
-5.2 Community	22
-5.3 Game	22
+##Technical Documentation
+
+###Content:
+
+#### 1. Installation manual	
+1.1 Server	
+1.2 Mobile terminal	
+#### 2. General description	
+#### 3. Technical description of functionalities and structures	
+3.1 Database	
+3.2 Community-Surface	
+3.3 Interfaces (RestAPI / Websockets)	
+3.4 Game structure	
+#### 4. Handling	
+4.1 Set up a new game	
+4.2 Playing the game on the mobile terminal	
+#### 5. Possible extending functionalities	
+5.1 Editor	
+5.2 Community	
+5.3 Game	
 
 
 
