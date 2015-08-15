@@ -1,0 +1,64 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app="App">
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel=icon href=favicon.ico sizes="16x16" type="image/png">
+
+        <link rel="stylesheet" href="lib/css/foundation.css">
+        <link rel="stylesheet" href="css/map.css" />
+        <link rel="stylesheet" href="lib/css/leaflet.css" />
+        
+        <!-- SCROLLS -->
+        <script src="lib/js/jquery.js"></script>
+		<!-- load jquery plugins-->
+		<script src="lib/js/jquery.rateyo.js"></script>
+		<link rel="stylesheet" href="lib/css/jquery.rateyo.css"/>
+		<script src="lib/js/jquery.dataTables.js"></script>
+		<link rel="stylesheet" href="lib/css/jquery.dataTables.css"/>
+		
+        <!-- load foundation -->
+        <script src="lib/js/foundation.js"></script>
+        <script src="lib/js/foundation.reveal.js"></script>
+        <!-- SPELLS -->
+        <!-- load angular and angular route via CDN -->
+        <script src="lib/js/angular.min.js"></script>
+        <script src="lib/js/angular-route.min.js"></script>
+        
+        <script src="cordova.js"></script>
+        
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+        
+        <script src="js/GameInterface/Button.js"></script>        
+        <script src="js/GameInterface/HelpButton.js"></script>
+        <script src="js/GameInterface/ItemButton.js"></script>
+        <script src="js/GameInterface/OptionButton.js"></script>
+        <script src="js/GameInterface/TaskButton.js"></script>
+        <script src="js/GameInterface/Label.js"></script>
+        <script src="js/GameInterface/GPS.js"></script>
+        <script src="js/GameInterface/Map.js"></script>
+        <script src="js/GameInterface/Popup.js"></script>
+        <script src="js/GameInterface/Container.js"></script>
+        <script src="js/GameInterface/Header.js"></script>
+        <script src="js/GameInterface.js"></script>
+        <script src="js/route.js"></script>
+        <script src="js/login.js"></script>
+        <script src="js/gameinfo.js"></script>
+        <script src="js/signup.js"></script>
+        <script src="js/gameselect.js"></script>
+        <script src="js/profile.js"></script>
+        <script src="js/changeprofile.js"></script>
+        <script src="js/game.js"></script>
+		<script src="js/impressum.js"></script>
+
+    </head>
+    <body>
+        <!-- MAIN CONTENT AND INJECTED VIEWS -->
+        <div id="main">
+            <div ng-view></div>
+        </div>
+    </body>
+</html>
