@@ -2,4 +2,4 @@ The product is an application to build up small GPS based games and publish them
 
 The intention is that with the application games of the genre role-playing game (RPG) and adventure game can be created as well as paper chases and games like “zombie run”. The application is constructed in this way that new elements of an existing abstract game element can be implemented easily by a developer. So it is possible that complex games can be created. Moreover community aspects are considered. The platform offers that the created games can be played by other players, not only the creator of the game. Also users can communicate with other users above the platform. The data model of the game engine is furthermore structured that way that multiple players can play against each other or together.
 
-For more and technical information visit the [MGL-Wiki|Home]
+For more and technical information visit the [MGL-Wiki](https://github.com/MobileGamingLabMobile/MGL/wiki)!
